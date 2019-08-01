@@ -2,7 +2,7 @@ spring:
   application:
     name: itoken-zipkin
   zipkin:
-    base-url: http://192.168.242.132:9411
+    base-url: http://192.168.242.128:9411
   boot:
     admin:
       client:
@@ -21,3 +21,10 @@ management:
     web:
       server:
         auto-time-requests: false
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: health,info
