@@ -1,36 +1,8 @@
 spring:
   application:
     name: itoken-web-admin
-  zipkin:
-    base-url: http://localhost:9411
-  boot:
-    admin:
-      client:
-        url: http://localhost:8084
-  thymeleaf:
-    cache: false
-    mode: LEGACYHTML5
-    encoding: UTF-8
-    servlet:
-      content-type: text/html
 
 server:
   port: 8601
 
-feign:
-  hystrix:
-    enabled: true
 
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
-
-management:
-  endpoint:
-    health:
-      show-details: always
-  endpoints:
-    web:
-      exposure:
-        include: health,info

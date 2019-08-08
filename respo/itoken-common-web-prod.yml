@@ -1,0 +1,31 @@
+spring:
+  zipkin:
+    base-url: http://192.168.242.128:9411
+  boot:
+    admin:
+      client:
+        url: http://192.168.242.132:8084
+  thymeleaf:
+    cache: false
+    mode: LEGACYHTML5
+    encoding: UTF-8
+    servlet:
+      content-type: text/html
+
+feign:
+  hystrix:
+    enabled: true
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://192.168.242.132:8761/eureka/,http://192.168.242.132:8861/eureka/,http://192.168.242.132:8961/eureka/
+
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: health,info
